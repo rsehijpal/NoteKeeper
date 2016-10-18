@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="icons/favicon/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/master.css">
+
+</head>
+<body ng-app="notebookMain">
+	<div class="panel panel-default"  >
+		<div class="panel-heading">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#"> <img alt="Brand"
+							src="icons/logo.jpg" class="logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="panel-body" ng-controller="displayNotes">
+	<div ng-bind="name"></div>
+			<ul class="dynamic-grid" angular-grid="notes" grid-width="300"
+				gutter-size="10" angular-grid-id="gallery"
+				refresh-on-img-load="false">
+				<li data-ng-repeat="note in notes" class="grid"><!-- <img
+					src="{{pic.media.m}}" class="grid-img"
+					data-actual-width="{{pic.actualWidth}}"
+					data-actual-height="{{pic.actualHeight}}" /> -->
+					<div  ng-bind="note.data" style="text-overflow:ellipses;word-break:break-all;width:inherit;padding:5%"></div>
+					</li>
+			</ul>
+		</div>
+		<div class="panel-footer">
+			<script src="js/lib/jquery/jquery-3.1.1.min.js"></script>
+			<script src="js/lib/angular/angular.min.js"></script>
+			<script src="js/lib/restangular/underscore-min.js"></script>
+			<script src="js/lib/restangular/restangular.js"></script>
+			<script src="js/lib/restangular/lodash.js"></script>
+			<script src="js/lib/angular-grid/angulargrid.min.js"></script>
+			<script src="js/app/app.js"></script>
+			<script src="js/app/displayNotes/displayNote.controller.js"></script>
+		</div>
+	</div>
+</body>
+</html>
