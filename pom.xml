@@ -7,30 +7,26 @@
 	<name>MyDigitalNotebookWebapp</name>
 	
 	<scm>
+    	<connection>scm:git:https://github.com/rsehijpal/NoteKeeper.git</connection>
 		<developerConnection>scm:git:https://github.com/rsehijpal/NoteKeeper.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
 		<repository>
-			<id>nexus-release</id>
-			<url>http://localhost:8081/repository/maven-releases/</url>
+			<name>maven-releases</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
 		</repository>
 		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>test-snapshots</name>
-			<url>http://localhost:8081/repository/test-snapshots/</url>
+			<name>maven-snapshots</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
 	
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-		<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-release-plugin</artifactId>
-    <version>2.5.3</version>
-</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -90,6 +86,11 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
+			</plugin>
+<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
 			</plugin>
 		</plugins>
 
