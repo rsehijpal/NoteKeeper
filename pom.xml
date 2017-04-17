@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.digital.note</groupId>
 	<artifactId>MyDigitalNotebook</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>war</packaging>
 	<name>MyDigitalNotebookWebapp</name>
 	
 	<scm>
     	<connection>scm:git:https://github.com/rsehijpal/NoteKeeper.git</connection>
 		<developerConnection>scm:git:https://github.com/rsehijpal/NoteKeeper.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>MyDigitalNotebook-0.0.2</tag>
 	</scm>
 
 	<distributionManagement>
